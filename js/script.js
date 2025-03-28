@@ -56,3 +56,17 @@ for(let i = 0; i < squadre.length; i++){
 }
 
 console.log(squadre)
+
+// Creiamo un array vuoto per contenere i risultati
+const nuoviArray = [];
+
+// Iteriamo attraverso l'array 'squadre' con un ciclo for
+for (let i = 0; i < squadre.length; i++) {
+  // Aggiungiamo un nuovo oggetto con nome e falli subiti all'array
+  nuoviArray.push({ nome: squadre[i].nome, falliSubiti: squadre[i].falliSubiti });
+}
+
+// Stampa l'array finale
+console.log(nuoviArray);
+
+  
