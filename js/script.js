@@ -30,3 +30,29 @@ Ogni squadra avrà diverse proprietà: nome, punti fatti, falli subiti.
 Nome sarà l’unica proprietà da compilare, le altre saranno tutte settate a 0. 
 Generare numeri random al posto degli 0 nelle proprietà “punti” fatti e “falli subiti”. 
 Infine, creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console. */
+
+// 1. Creiamo l'array di oggetti di squadre di calcio.
+let squadre = [
+    {nome:'Salernitana', puntiFatti: 0, falliSubiti: 0},
+    {nome:'Napoli', puntiFatti: 0, falliSubiti: 0},
+    {nome:'Juventus', puntiFatti: 0, falliSubiti: 0},
+    {nome:'Bayern Monaco', puntiFatti: 0, falliSubiti: 0},
+    {nome:'Paris Saint-Germain (PSG)', puntiFatti: 0, falliSubiti: 0},
+]
+
+// 2. Genera numeri random al posto degli 0 nelle proprietà “punti” fatti e “falli subiti”.
+// Primo for genera numeri random x i punti fatti.
+for(let i = 0; i < squadre.length; i++){
+    if(squadre[i].puntiFatti === 0){
+        squadre[i].puntiFatti = Math.floor(Math.random() * 50);
+    }
+}
+
+// Secondo for genera numeri random x i falli subiti.
+for(let i = 0; i < squadre.length; i++){
+    if(squadre[i].falliSubiti === 0){
+        squadre[i].falliSubiti = Math.floor(Math.random() * 50);
+    }
+}
+
+console.log(squadre)
